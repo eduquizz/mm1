@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -35,8 +34,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link mm1.impl.QuestionImpl#getEnnonce <em>Ennonce</em>}</li>
  *   <li>{@link mm1.impl.QuestionImpl#getDifficulte <em>Difficulte</em>}</li>
  *   <li>{@link mm1.impl.QuestionImpl#isReponsesMultiples <em>Reponses Multiples</em>}</li>
- *   <li>{@link mm1.impl.QuestionImpl#getEtiquette <em>Etiquette</em>}</li>
  *   <li>{@link mm1.impl.QuestionImpl#getReponse <em>Reponse</em>}</li>
+ *   <li>{@link mm1.impl.QuestionImpl#getEtiquette <em>Etiquette</em>}</li>
  * </ul>
  *
  * @generated
@@ -103,16 +102,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	protected boolean reponsesMultiples = REPONSES_MULTIPLES_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getEtiquette() <em>Etiquette</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEtiquette()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Etiquette> etiquette;
-
-	/**
 	 * The cached value of the '{@link #getReponse() <em>Reponse</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,6 +110,16 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * @ordered
 	 */
 	protected EList<Reponse> reponse;
+
+	/**
+	 * The cached value of the '{@link #getEtiquette() <em>Etiquette</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEtiquette()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Etiquette> etiquette;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -220,7 +219,7 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	@Override
 	public EList<Etiquette> getEtiquette() {
 		if (etiquette == null) {
-			etiquette = new EObjectResolvingEList<Etiquette>(Etiquette.class, this, Mm1Package.QUESTION__ETIQUETTE);
+			etiquette = new EObjectContainmentEList<Etiquette>(Etiquette.class, this, Mm1Package.QUESTION__ETIQUETTE);
 		}
 		return etiquette;
 	}
@@ -248,6 +247,8 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		switch (featureID) {
 		case Mm1Package.QUESTION__REPONSE:
 			return ((InternalEList<?>) getReponse()).basicRemove(otherEnd, msgs);
+		case Mm1Package.QUESTION__ETIQUETTE:
+			return ((InternalEList<?>) getEtiquette()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -266,10 +267,10 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			return getDifficulte();
 		case Mm1Package.QUESTION__REPONSES_MULTIPLES:
 			return isReponsesMultiples();
-		case Mm1Package.QUESTION__ETIQUETTE:
-			return getEtiquette();
 		case Mm1Package.QUESTION__REPONSE:
 			return getReponse();
+		case Mm1Package.QUESTION__ETIQUETTE:
+			return getEtiquette();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -292,13 +293,13 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		case Mm1Package.QUESTION__REPONSES_MULTIPLES:
 			setReponsesMultiples((Boolean) newValue);
 			return;
-		case Mm1Package.QUESTION__ETIQUETTE:
-			getEtiquette().clear();
-			getEtiquette().addAll((Collection<? extends Etiquette>) newValue);
-			return;
 		case Mm1Package.QUESTION__REPONSE:
 			getReponse().clear();
 			getReponse().addAll((Collection<? extends Reponse>) newValue);
+			return;
+		case Mm1Package.QUESTION__ETIQUETTE:
+			getEtiquette().clear();
+			getEtiquette().addAll((Collection<? extends Etiquette>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -321,11 +322,11 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		case Mm1Package.QUESTION__REPONSES_MULTIPLES:
 			setReponsesMultiples(REPONSES_MULTIPLES_EDEFAULT);
 			return;
-		case Mm1Package.QUESTION__ETIQUETTE:
-			getEtiquette().clear();
-			return;
 		case Mm1Package.QUESTION__REPONSE:
 			getReponse().clear();
+			return;
+		case Mm1Package.QUESTION__ETIQUETTE:
+			getEtiquette().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -345,10 +346,10 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			return difficulte != DIFFICULTE_EDEFAULT;
 		case Mm1Package.QUESTION__REPONSES_MULTIPLES:
 			return reponsesMultiples != REPONSES_MULTIPLES_EDEFAULT;
-		case Mm1Package.QUESTION__ETIQUETTE:
-			return etiquette != null && !etiquette.isEmpty();
 		case Mm1Package.QUESTION__REPONSE:
 			return reponse != null && !reponse.isEmpty();
+		case Mm1Package.QUESTION__ETIQUETTE:
+			return etiquette != null && !etiquette.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

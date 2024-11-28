@@ -204,22 +204,22 @@ public interface Mm1Package extends EPackage {
 	int QUESTION__REPONSES_MULTIPLES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Etiquette</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__ETIQUETTE = 3;
-
-	/**
 	 * The feature id for the '<em><b>Reponse</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION__REPONSE = 4;
+	int QUESTION__REPONSE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Etiquette</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION__ETIQUETTE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Question</em>' class.
@@ -420,10 +420,10 @@ public interface Mm1Package extends EPackage {
 	EAttribute getQuestion_ReponsesMultiples();
 
 	/**
-	 * Returns the meta object for the reference list '{@link mm1.Question#getEtiquette <em>Etiquette</em>}'.
+	 * Returns the meta object for the containment reference list '{@link mm1.Question#getEtiquette <em>Etiquette</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Etiquette</em>'.
+	 * @return the meta object for the containment reference list '<em>Etiquette</em>'.
 	 * @see mm1.Question#getEtiquette()
 	 * @see #getQuestion()
 	 * @generated
@@ -604,7 +604,7 @@ public interface Mm1Package extends EPackage {
 		EAttribute QUESTION__REPONSES_MULTIPLES = eINSTANCE.getQuestion_ReponsesMultiples();
 
 		/**
-		 * The meta object literal for the '<em><b>Etiquette</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Etiquette</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

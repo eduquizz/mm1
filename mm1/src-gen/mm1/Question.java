@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link mm1.Question#getEnnonce <em>Ennonce</em>}</li>
  *   <li>{@link mm1.Question#getDifficulte <em>Difficulte</em>}</li>
  *   <li>{@link mm1.Question#isReponsesMultiples <em>Reponses Multiples</em>}</li>
- *   <li>{@link mm1.Question#getEtiquette <em>Etiquette</em>}</li>
  *   <li>{@link mm1.Question#getReponse <em>Reponse</em>}</li>
+ *   <li>{@link mm1.Question#getEtiquette <em>Etiquette</em>}</li>
  * </ul>
  *
  * @see mm1.Mm1Package#getQuestion()
@@ -94,13 +94,13 @@ public interface Question extends EObject {
 	void setReponsesMultiples(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Etiquette</b></em>' reference list.
+	 * Returns the value of the '<em><b>Etiquette</b></em>' containment reference list.
 	 * The list contents are of type {@link mm1.Etiquette}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Etiquette</em>' reference list.
+	 * @return the value of the '<em>Etiquette</em>' containment reference list.
 	 * @see mm1.Mm1Package#getQuestion_Etiquette()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Etiquette> getEtiquette();

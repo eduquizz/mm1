@@ -59,7 +59,6 @@ public class QuestionItemProvider extends ItemProviderAdapter implements IEditin
 			addEnnoncePropertyDescriptor(object);
 			addDifficultePropertyDescriptor(object);
 			addReponsesMultiplesPropertyDescriptor(object);
-			addEtiquettePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -113,21 +112,6 @@ public class QuestionItemProvider extends ItemProviderAdapter implements IEditin
 	}
 
 	/**
-	 * This adds a property descriptor for the Etiquette feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEtiquettePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Question_etiquette_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Question_etiquette_feature",
-								"_UI_Question_type"),
-						Mm1Package.Literals.QUESTION__ETIQUETTE, true, false, true, null, null, null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -140,6 +124,7 @@ public class QuestionItemProvider extends ItemProviderAdapter implements IEditin
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Mm1Package.Literals.QUESTION__REPONSE);
+			childrenFeatures.add(Mm1Package.Literals.QUESTION__ETIQUETTE);
 		}
 		return childrenFeatures;
 	}
@@ -209,6 +194,7 @@ public class QuestionItemProvider extends ItemProviderAdapter implements IEditin
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Mm1Package.QUESTION__REPONSE:
+		case Mm1Package.QUESTION__ETIQUETTE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -228,6 +214,9 @@ public class QuestionItemProvider extends ItemProviderAdapter implements IEditin
 
 		newChildDescriptors
 				.add(createChildParameter(Mm1Package.Literals.QUESTION__REPONSE, Mm1Factory.eINSTANCE.createReponse()));
+
+		newChildDescriptors.add(
+				createChildParameter(Mm1Package.Literals.QUESTION__ETIQUETTE, Mm1Factory.eINSTANCE.createEtiquette()));
 	}
 
 	/**

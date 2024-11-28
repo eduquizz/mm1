@@ -220,7 +220,7 @@ public class Mm1PackageImpl extends EPackageImpl implements Mm1Package {
 	 */
 	@Override
 	public EReference getQuestion_Etiquette() {
-		return (EReference) questionEClass.getEStructuralFeatures().get(3);
+		return (EReference) questionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -230,7 +230,7 @@ public class Mm1PackageImpl extends EPackageImpl implements Mm1Package {
 	 */
 	@Override
 	public EReference getQuestion_Reponse() {
-		return (EReference) questionEClass.getEStructuralFeatures().get(4);
+		return (EReference) questionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -333,8 +333,8 @@ public class Mm1PackageImpl extends EPackageImpl implements Mm1Package {
 		createEAttribute(questionEClass, QUESTION__ENNONCE);
 		createEAttribute(questionEClass, QUESTION__DIFFICULTE);
 		createEAttribute(questionEClass, QUESTION__REPONSES_MULTIPLES);
-		createEReference(questionEClass, QUESTION__ETIQUETTE);
 		createEReference(questionEClass, QUESTION__REPONSE);
+		createEReference(questionEClass, QUESTION__ETIQUETTE);
 
 		reponseEClass = createEClass(REPONSE);
 		createEAttribute(reponseEClass, REPONSE__TEXTE);
@@ -403,10 +403,10 @@ public class Mm1PackageImpl extends EPackageImpl implements Mm1Package {
 		initEAttribute(getQuestion_ReponsesMultiples(), ecorePackage.getEBoolean(), "reponsesMultiples", null, 0, 1,
 				Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getQuestion_Etiquette(), this.getEtiquette(), null, "etiquette", null, 0, -1, Question.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQuestion_Reponse(), this.getReponse(), null, "reponse", null, 2, -1, Question.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQuestion_Etiquette(), this.getEtiquette(), null, "etiquette", null, 0, -1, Question.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
