@@ -7,7 +7,7 @@
     <semanticResources>../plugin.properties</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_PH4i0K2QEe-jk_JwMFVPnA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_PKGJUK2QEe-jk_JwMFVPnA" name="mm1" repPath="#_PJivsK2QEe-jk_JwMFVPnA" changeId="1735934321541">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_PKGJUK2QEe-jk_JwMFVPnA" name="mm1" repPath="#_PJivsK2QEe-jk_JwMFVPnA" changeId="1735946882879">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="mm1.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -19,10 +19,6 @@
         <children xmi:type="notation:Node" xmi:id="_ey8tgK2QEe-jk_JwMFVPnA" type="2003" element="_eyeMYK2QEe-jk_JwMFVPnA">
           <children xmi:type="notation:Node" xmi:id="_ey9UkK2QEe-jk_JwMFVPnA" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_ey_JwK2QEe-jk_JwMFVPnA" type="7004">
-            <children xmi:type="notation:Node" xmi:id="_ezCNEK2QEe-jk_JwMFVPnA" type="3010" element="_eyrnwK2QEe-jk_JwMFVPnA">
-              <styles xmi:type="notation:FontStyle" xmi:id="_ezCNEa2QEe-jk_JwMFVPnA" fontName="Sans" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_ezCNEq2QEe-jk_JwMFVPnA"/>
-            </children>
             <children xmi:type="notation:Node" xmi:id="_ezCNE62QEe-jk_JwMFVPnA" type="3010" element="_eyuEAK2QEe-jk_JwMFVPnA">
               <styles xmi:type="notation:FontStyle" xmi:id="_ezCNFK2QEe-jk_JwMFVPnA" fontName="Sans" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_ezCNFa2QEe-jk_JwMFVPnA"/>
@@ -210,14 +206,6 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_eyrnwK2QEe-jk_JwMFVPnA" name="resultat : EDouble = 0.0" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="mm1.ecore#//Questionnaire/resultat"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="mm1.ecore#//Questionnaire/resultat"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_eytc8K2QEe-jk_JwMFVPnA" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-      </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_eyuEAK2QEe-jk_JwMFVPnA" name="retourAutorise : EBoolean = true" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="mm1.ecore#//Questionnaire/retourAutorise"/>
         <semanticElements xmi:type="ecore:EAttribute" href="mm1.ecore#//Questionnaire/retourAutorise"/>

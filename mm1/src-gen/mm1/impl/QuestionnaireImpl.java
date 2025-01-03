@@ -29,7 +29,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link mm1.impl.QuestionnaireImpl#getResultat <em>Resultat</em>}</li>
  *   <li>{@link mm1.impl.QuestionnaireImpl#isRetourAutorise <em>Retour Autorise</em>}</li>
  *   <li>{@link mm1.impl.QuestionnaireImpl#isMelange <em>Melange</em>}</li>
  *   <li>{@link mm1.impl.QuestionnaireImpl#getQuestion <em>Question</em>}</li>
@@ -38,26 +37,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class QuestionnaireImpl extends ElementNommeImpl implements Questionnaire {
-	/**
-	 * The default value of the '{@link #getResultat() <em>Resultat</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResultat()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double RESULTAT_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getResultat() <em>Resultat</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResultat()
-	 * @generated
-	 * @ordered
-	 */
-	protected double resultat = RESULTAT_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #isRetourAutorise() <em>Retour Autorise</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -125,30 +104,6 @@ public class QuestionnaireImpl extends ElementNommeImpl implements Questionnaire
 	@Override
 	protected EClass eStaticClass() {
 		return Mm1Package.Literals.QUESTIONNAIRE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public double getResultat() {
-		return resultat;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setResultat(double newResultat) {
-		double oldResultat = resultat;
-		resultat = newResultat;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Mm1Package.QUESTIONNAIRE__RESULTAT, oldResultat,
-					resultat));
 	}
 
 	/**
@@ -234,8 +189,6 @@ public class QuestionnaireImpl extends ElementNommeImpl implements Questionnaire
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Mm1Package.QUESTIONNAIRE__RESULTAT:
-			return getResultat();
 		case Mm1Package.QUESTIONNAIRE__RETOUR_AUTORISE:
 			return isRetourAutorise();
 		case Mm1Package.QUESTIONNAIRE__MELANGE:
@@ -255,9 +208,6 @@ public class QuestionnaireImpl extends ElementNommeImpl implements Questionnaire
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Mm1Package.QUESTIONNAIRE__RESULTAT:
-			setResultat((Double) newValue);
-			return;
 		case Mm1Package.QUESTIONNAIRE__RETOUR_AUTORISE:
 			setRetourAutorise((Boolean) newValue);
 			return;
@@ -280,9 +230,6 @@ public class QuestionnaireImpl extends ElementNommeImpl implements Questionnaire
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Mm1Package.QUESTIONNAIRE__RESULTAT:
-			setResultat(RESULTAT_EDEFAULT);
-			return;
 		case Mm1Package.QUESTIONNAIRE__RETOUR_AUTORISE:
 			setRetourAutorise(RETOUR_AUTORISE_EDEFAULT);
 			return;
@@ -304,8 +251,6 @@ public class QuestionnaireImpl extends ElementNommeImpl implements Questionnaire
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Mm1Package.QUESTIONNAIRE__RESULTAT:
-			return resultat != RESULTAT_EDEFAULT;
 		case Mm1Package.QUESTIONNAIRE__RETOUR_AUTORISE:
 			return retourAutorise != RETOUR_AUTORISE_EDEFAULT;
 		case Mm1Package.QUESTIONNAIRE__MELANGE:
@@ -327,9 +272,7 @@ public class QuestionnaireImpl extends ElementNommeImpl implements Questionnaire
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (resultat: ");
-		result.append(resultat);
-		result.append(", retourAutorise: ");
+		result.append(" (retourAutorise: ");
 		result.append(retourAutorise);
 		result.append(", melange: ");
 		result.append(melange);

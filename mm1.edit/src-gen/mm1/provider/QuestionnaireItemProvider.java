@@ -47,27 +47,10 @@ public class QuestionnaireItemProvider extends ElementNommeItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addResultatPropertyDescriptor(object);
 			addRetourAutorisePropertyDescriptor(object);
 			addMelangePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Resultat feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addResultatPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Questionnaire_resultat_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Questionnaire_resultat_feature",
-								"_UI_Questionnaire_type"),
-						Mm1Package.Literals.QUESTIONNAIRE__RESULTAT, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -178,7 +161,6 @@ public class QuestionnaireItemProvider extends ElementNommeItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Questionnaire.class)) {
-		case Mm1Package.QUESTIONNAIRE__RESULTAT:
 		case Mm1Package.QUESTIONNAIRE__RETOUR_AUTORISE:
 		case Mm1Package.QUESTIONNAIRE__MELANGE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

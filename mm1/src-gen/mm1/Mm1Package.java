@@ -113,22 +113,13 @@ public interface Mm1Package extends EPackage {
 	int QUESTIONNAIRE__NOM = ELEMENT_NOMME__NOM;
 
 	/**
-	 * The feature id for the '<em><b>Resultat</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTIONNAIRE__RESULTAT = ELEMENT_NOMME_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Retour Autorise</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONNAIRE__RETOUR_AUTORISE = ELEMENT_NOMME_FEATURE_COUNT + 1;
+	int QUESTIONNAIRE__RETOUR_AUTORISE = ELEMENT_NOMME_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Melange</b></em>' attribute.
@@ -137,7 +128,7 @@ public interface Mm1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONNAIRE__MELANGE = ELEMENT_NOMME_FEATURE_COUNT + 2;
+	int QUESTIONNAIRE__MELANGE = ELEMENT_NOMME_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Question</b></em>' containment reference list.
@@ -146,7 +137,7 @@ public interface Mm1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONNAIRE__QUESTION = ELEMENT_NOMME_FEATURE_COUNT + 3;
+	int QUESTIONNAIRE__QUESTION = ELEMENT_NOMME_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Questionnaire</em>' class.
@@ -155,7 +146,7 @@ public interface Mm1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTIONNAIRE_FEATURE_COUNT = ELEMENT_NOMME_FEATURE_COUNT + 4;
+	int QUESTIONNAIRE_FEATURE_COUNT = ELEMENT_NOMME_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Questionnaire</em>' class.
@@ -331,17 +322,6 @@ public interface Mm1Package extends EPackage {
 	 * @generated
 	 */
 	EClass getQuestionnaire();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mm1.Questionnaire#getResultat <em>Resultat</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Resultat</em>'.
-	 * @see mm1.Questionnaire#getResultat()
-	 * @see #getQuestionnaire()
-	 * @generated
-	 */
-	EAttribute getQuestionnaire_Resultat();
 
 	/**
 	 * Returns the meta object for the attribute '{@link mm1.Questionnaire#isRetourAutorise <em>Retour Autorise</em>}'.
@@ -536,14 +516,6 @@ public interface Mm1Package extends EPackage {
 		 * @generated
 		 */
 		EClass QUESTIONNAIRE = eINSTANCE.getQuestionnaire();
-
-		/**
-		 * The meta object literal for the '<em><b>Resultat</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute QUESTIONNAIRE__RESULTAT = eINSTANCE.getQuestionnaire_Resultat();
 
 		/**
 		 * The meta object literal for the '<em><b>Retour Autorise</b></em>' attribute feature.

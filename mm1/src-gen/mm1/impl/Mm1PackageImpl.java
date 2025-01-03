@@ -139,7 +139,7 @@ public class Mm1PackageImpl extends EPackageImpl implements Mm1Package {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getQuestionnaire_Resultat() {
+	public EAttribute getQuestionnaire_RetourAutorise() {
 		return (EAttribute) questionnaireEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -149,7 +149,7 @@ public class Mm1PackageImpl extends EPackageImpl implements Mm1Package {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getQuestionnaire_RetourAutorise() {
+	public EAttribute getQuestionnaire_Melange() {
 		return (EAttribute) questionnaireEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -159,18 +159,8 @@ public class Mm1PackageImpl extends EPackageImpl implements Mm1Package {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getQuestionnaire_Melange() {
-		return (EAttribute) questionnaireEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getQuestionnaire_Question() {
-		return (EReference) questionnaireEClass.getEStructuralFeatures().get(3);
+		return (EReference) questionnaireEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -324,7 +314,6 @@ public class Mm1PackageImpl extends EPackageImpl implements Mm1Package {
 
 		// Create classes and their features
 		questionnaireEClass = createEClass(QUESTIONNAIRE);
-		createEAttribute(questionnaireEClass, QUESTIONNAIRE__RESULTAT);
 		createEAttribute(questionnaireEClass, QUESTIONNAIRE__RETOUR_AUTORISE);
 		createEAttribute(questionnaireEClass, QUESTIONNAIRE__MELANGE);
 		createEReference(questionnaireEClass, QUESTIONNAIRE__QUESTION);
@@ -381,9 +370,6 @@ public class Mm1PackageImpl extends EPackageImpl implements Mm1Package {
 		// Initialize classes, features, and operations; add parameters
 		initEClass(questionnaireEClass, Questionnaire.class, "Questionnaire", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getQuestionnaire_Resultat(), ecorePackage.getEDouble(), "resultat", null, 0, 1,
-				Questionnaire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuestionnaire_RetourAutorise(), ecorePackage.getEBoolean(), "retourAutorise", "true", 0, 1,
 				Questionnaire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);

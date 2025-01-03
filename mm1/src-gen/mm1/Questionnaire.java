@@ -13,7 +13,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link mm1.Questionnaire#getResultat <em>Resultat</em>}</li>
  *   <li>{@link mm1.Questionnaire#isRetourAutorise <em>Retour Autorise</em>}</li>
  *   <li>{@link mm1.Questionnaire#isMelange <em>Melange</em>}</li>
  *   <li>{@link mm1.Questionnaire#getQuestion <em>Question</em>}</li>
@@ -24,28 +23,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface Questionnaire extends ElementNomme {
-	/**
-	 * Returns the value of the '<em><b>Resultat</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resultat</em>' attribute.
-	 * @see #setResultat(double)
-	 * @see mm1.Mm1Package#getQuestionnaire_Resultat()
-	 * @model
-	 * @generated
-	 */
-	double getResultat();
-
-	/**
-	 * Sets the value of the '{@link mm1.Questionnaire#getResultat <em>Resultat</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Resultat</em>' attribute.
-	 * @see #getResultat()
-	 * @generated
-	 */
-	void setResultat(double value);
-
 	/**
 	 * Returns the value of the '<em><b>Retour Autorise</b></em>' attribute.
 	 * The default value is <code>"true"</code>.

@@ -9,7 +9,6 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Mm1" disposableProviderFactory="true" ecorePackage="mm1.ecore#/">
     <genClasses ecoreClass="mm1.ecore#//Questionnaire">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm1.ecore#//Questionnaire/resultat"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm1.ecore#//Questionnaire/retourAutorise"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm1.ecore#//Questionnaire/melange"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm1.ecore#//Questionnaire/question"/>
